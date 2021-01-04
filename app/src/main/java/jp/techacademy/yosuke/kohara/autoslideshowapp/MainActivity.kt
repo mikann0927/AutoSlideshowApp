@@ -74,6 +74,10 @@ open class MainActivity : AppCompatActivity() {
 
                 ContentUris.withAppendedId(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, id)
             imageView.setImageURI(imageUri)
+        } else {
+            next_button.setEnabled(false)
+            back_button.setEnabled(false)
+            start_button.setEnabled(false)
         }
         next_button.setOnClickListener {
             if (cursor.moveToNext()) {
